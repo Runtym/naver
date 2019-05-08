@@ -1,0 +1,9 @@
+1. mkdir /swap
+2. dd if=/dev/zero 
+of=/swap/swapfile bs=1024 
+count=2097152
+3. mkswap /swap/swapfile
+4. swapon /swap/swapfile
+5. vi /etc/fstab
+6. /swap/swapfile swap swap 
+defaults 1 1

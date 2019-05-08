@@ -13,16 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
 @Slf4j
 public class HomeController {
-	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		log.info("Welcome home! The client locale is {}.");
@@ -33,7 +26,6 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
-		
 		return "home";
 	}
 	@RequestMapping(value="/test")
