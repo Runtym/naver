@@ -14,7 +14,6 @@
 	
 	<bean id="ssFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="hikariDS"/>
-		<property name="mapperLocations" value="classpath:mapper/*.xml"/>		
 	</bean>
 	<bean id="ss" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="ssFactory"/>
